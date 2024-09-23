@@ -1,0 +1,286 @@
+css
+Edit
+Copy code
+/* Global Styles */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+.voting{
+    text-align: center;
+}
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #f9f9f9;
+  margin: 0;
+  padding-top: 0;
+}
+
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 1em;
+  text-align: center;
+}
+ol{
+  text-align: start;
+}
+header nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+header nav li {
+  margin-right: 20px;
+}
+
+header nav a {
+  color: #fff;
+  text-decoration: none;
+}
+
+header nav a:hover {
+  color: #ccc;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2em;
+}
+section {
+  background-color: #fff;
+  padding-top: 5px;
+  padding-left: 2em;
+  padding-right: 2em;
+  padding-bottom: 3em;
+  margin-bottom: 20px;
+  max-width: 80%;
+  opacity: 0.8;
+}
+.stoxoi{
+  padding-top: 0px;
+  text-align: center;
+  padding-bottom: 1em;
+  font-size: x-large;
+  font-weight: bold;
+}
+h1, h2 {
+  color: #333;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+p {
+  margin-bottom: 20px;
+}
+.question{
+  text-align: center;
+}
+/* Home Section */
+
+.firstdiv {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.blog {
+  margin-bottom: 20px;
+}
+
+.moreinfo {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.item, .item11 {
+  color: #333;
+  background-color: #fff;
+  border: none;
+  border-radius: 20%;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  position: relative;
+  transition: transform 0.3s ease-in-out;
+  padding-top: 4px;
+  padding-bottom: 5px;
+  padding-left: 9px;
+  padding-right: 9px;
+  cursor: pointer;
+}
+#secondHome{
+  background-color: rgba(255, 255, 255, 0.5); /* 50% opaque white background */
+  color: rgba(0, 0, 0, 0.5); /* 50% opaque black text */
+
+}
+
+.item::after {
+  content: "";
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  width: 0px;
+  height: 2px;
+  background-color: black;
+  z-index: -1;
+  transition: width 0.5s ease-in-out;
+}
+.item:hover{
+  transform: scale(1.1);
+  z-index: 1;
+}
+.item:hover::after {
+  width: 100%;
+}
+
+.item.animate::after {
+  animation: underlineAnimation 0.5s ease-in-out alternate forwards;
+}
+
+@keyframes underlineAnimation {
+  0% {
+    width: 0;
+    transform: translateX(0);
+  }
+  100% {
+    width: 100%;
+    transform: translateX(0);
+  }
+}
+
+.item:not(:hover)::after {
+  animation: underlineReverse 0.5s ease-in-out alternate forwards;
+}
+
+@keyframes underlineReverse {
+  0% {
+    width: 100%;
+    transform: translateX(0);
+  }
+  100% {
+    width: 0;
+    transform: translateX(100%);
+  }
+}
+.clicked {
+  background-color: #3F9993;
+  border-radius: 7px;
+  transform: translateY(2px) scale(1.1); /* Add a slight scale effect */
+  transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out; /* Update transition effect */
+  z-index: 2;
+  color: white;
+}
+/* Goals Section */
+.ol1, .ol2{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-left: 10%;
+  margin-right: 10%; 
+  text-align: center;
+  word-wrap: break-word;
+}
+.home{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  width: 90%;
+  justify-content: center;
+  margin-left: 7%;
+  margin-right: 7%; 
+  text-align: center;
+  word-wrap: break-word;
+}
+
+.question {
+  margin-bottom: 10px;
+}
+
+.inputText{
+  display: flex;
+  margin: 0 auto;
+  justify-content: center;
+}
+.inputs {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+}
+
+.item1 {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+}
+.item1 input[type="checkbox"] {
+    margin-right: 10px;
+  }
+.text {
+  margin-left: 10px;
+}
+
+.submitButton {
+  margin-top: 20px;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+}
+
+.submit {
+  background-color: #333;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.submit:hover {
+  background-color: #444;
+}
+.nonamed{
+  text-align: center;
+}
+
+footer {
+  background-color: #333;
+  color: #fff;
+  width: 100%;
+  clear: both;
+  margin: none;
+  text-align: center;
+}
+.item1.animate {
+    transform: scale(1.1);
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  /* Add a class to the checkbox to animate */
+  input[type="checkbox"]:checked + .text {
+    color: #008000; /* green color */
+    transition: color 0.3s ease-in-out;
+  }
+.schoolImage{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  margin: 0;
+  padding: 0;
+  position: fixed;
+}
